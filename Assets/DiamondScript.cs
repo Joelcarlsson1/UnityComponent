@@ -28,6 +28,14 @@ public class DiamondScript : MonoBehaviour
         {
             transform.Rotate(0f, 0f, -rotationSpeed * Time.deltaTime);
         }
-        transform.Translate(5f * Time.deltaTime, 0f, 0f, Space.Self);
+        if (Input.GetKey(KeyCode.W))
+        {
+            transform.Translate(5f * Time.deltaTime, 0f, 0f, Space.Self);
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            transform.Translate(-5f * Time.deltaTime, 0f, 0f, Space.Self);
+        }
+
     }
 }
